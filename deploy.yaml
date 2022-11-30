@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: express
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: express
@@ -14,4 +14,9 @@ spec:
     spec:
       containers:
         - image: ishaangulati8/basic-express:latest
-          name: basic-express
+          name: express
+          esources:
+          # You must specify requests for CPU to autoscale
+          # based on CPU utilization
+          requests:
+            cpu: "250m"
