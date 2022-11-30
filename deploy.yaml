@@ -15,7 +15,7 @@ spec:
       containers:
         - image: ishaangulati8/basic-express:latest
           name: express
-          esources:
+          resources:
           # You must specify requests for CPU to autoscale
           # based on CPU utilization
           requests:
