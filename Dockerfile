@@ -16,6 +16,6 @@ RUN npm install
 # Bundle app source
 WORKDIR /usr/src/app
 COPY  . /usr/src/app/
-EXPOSE 3001
+EXPOSE 30001
 WORKDIR /usr/src/app
 CMD [ "node", "index" ] 
